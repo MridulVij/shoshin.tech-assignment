@@ -74,15 +74,15 @@ class _TasksDashboardUIState extends State<TasksDashboardUI> {
             child: Container(
               width: double.maxFinite,
               color: const Color.fromARGB(255, 217, 226, 228),
-              child: Column(
+              child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.all(8.0),
                     child: Text("Trending offers"),
                   ),
                   CustomTask1Widget(),
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.all(8.0),
                     child: Text("More offers"),
                   ),
