@@ -20,6 +20,7 @@ class MainApp extends StatelessWidget {
         ],
         builder: (context, child) {
           return const MaterialApp(
+            debugShowCheckedModeBanner: false,
             home: Scaffold(
               body: TasksDashboardUI(),
             ),
