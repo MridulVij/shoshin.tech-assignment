@@ -74,7 +74,7 @@ class _DetailsDashboardUIState extends State<DetailsDashboardUI> {
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
                           '${widget.users} users has already participated!',
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Colors.amber,
                               fontSize: 10,
                               fontWeight: FontWeight.w500),
@@ -85,7 +85,7 @@ class _DetailsDashboardUIState extends State<DetailsDashboardUI> {
                         // width: 350,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          gradient: LinearGradient(
+                          gradient: const LinearGradient(
                             colors: [
                               Color.fromARGB(255, 29, 125, 205),
                               Color.fromARGB(255, 103, 144, 214)
@@ -98,7 +98,7 @@ class _DetailsDashboardUIState extends State<DetailsDashboardUI> {
                         child: Center(
                             child: Text(
                           'Get ${detailData.payout}',
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Colors.white,
                               fontSize: 20,
                               fontWeight: FontWeight.w500),
@@ -215,19 +215,6 @@ class _DetailsDashboardUIState extends State<DetailsDashboardUI> {
           }
         },
       ),
-
-      //  Consumer<DetailsDataProvider>(builder: (context, state, child) {
-      //   if (state.detailsModelList.isNotEmpty) {
-      //     final detailData = DetailsModel.fromJson(state.detailsModel);
-      //     return Container(
-      //       child: Text(detailData.description!),
-      //     );
-      //   } else {
-      //     return const Center(
-      //       child: CircularProgressIndicator(),
-      //     );
-      //   }
-      // }),
     );
   }
 
