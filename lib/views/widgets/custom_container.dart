@@ -10,6 +10,7 @@ class CustomContainer extends StatelessWidget {
   final Color containerColor;
   final bool containerEnable;
   final bool iconEnable;
+  final String buttonAmountText;
   const CustomContainer(
       {super.key,
       required this.borderColor,
@@ -20,15 +21,16 @@ class CustomContainer extends StatelessWidget {
       required this.description,
       required this.containerColor,
       required this.containerEnable,
-      required this.iconEnable});
+      required this.iconEnable,
+      required this.buttonAmountText});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(50),
+          borderRadius: BorderRadius.circular(20),
           border: Border.all(width: 2, color: borderColor)),
-      child: Column(children: [
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Padding(
           padding: const EdgeInsets.all(6.0),
           child: Row(
@@ -60,7 +62,7 @@ class CustomContainer extends StatelessWidget {
                         const EdgeInsets.symmetric(horizontal: 20, vertical: 6),
                     child: Center(
                       child: Text(
-                        "20",
+                        buttonAmountText,
                         style: TextStyle(color: buttontextColor),
                       ),
                     ),
@@ -70,7 +72,15 @@ class CustomContainer extends StatelessWidget {
             ],
           ),
         ),
-        (description == "") ? Container() : Text(description),
+        (description == "")
+            ? Container()
+            : Padding(
+                padding: const EdgeInsets.all(6.0),
+                child: Text(
+                  description,
+                  style: TextStyle(color: Colors.grey[500], fontSize: 10),
+                ),
+              ),
       ]),
     );
   }

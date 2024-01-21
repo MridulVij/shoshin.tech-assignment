@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shosin_tech_assignment/controllers/providers/details_data_provider.dart';
 import 'package:shosin_tech_assignment/controllers/providers/tasks_data_provider.dart.dart';
-import 'package:shosin_tech_assignment/models/tasks_model.dart';
 import '../widgets/custom_appbar.dart';
 import '../widgets/custom_task_widgets.dart';
-import 'details_dashboard.dart';
 
 class TasksDashboardUI extends StatefulWidget {
   const TasksDashboardUI({super.key});

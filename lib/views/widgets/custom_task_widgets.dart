@@ -34,6 +34,8 @@ class CustomTask1Widget extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) => DetailsDashboardUI(
+                            users: tasksModel.totalLead!,
+                            logo: tasksModel.brand!.logo!,
                             index: index,
                           ),
                         ),
@@ -41,6 +43,7 @@ class CustomTask1Widget extends StatelessWidget {
                     },
                     child: Container(
                       decoration: BoxDecoration(
+                        color: Colors.white,
                         borderRadius: BorderRadius.circular(20),
                       ),
                       // height: 10,
@@ -149,6 +152,8 @@ class CustomTask2Widget extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) => DetailsDashboardUI(
+                            users: tasksModel.totalLead!,
+                            logo: tasksModel.brand!.logo!,
                             index: index,
                           ),
                         ),
